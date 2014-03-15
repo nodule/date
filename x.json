@@ -32,7 +32,7 @@
       "title": "Create Date",
       "ns": "date",
       "name": "create",
-      "fn": "output.out = new Date(input.value || undefined);\n"
+      "fn": "if(input.value) {\n  output.out = new Date(input.value);\n} else {\n  output.out = new Date();\n}\n"
     },
     {
       "ports": {

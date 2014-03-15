@@ -1,1 +1,5 @@
-output.out = new Date(input.value || undefined);
+if(input.value) {
+  output.out = new Date(input.value);
+} else {
+  output.out = new Date();
+}
