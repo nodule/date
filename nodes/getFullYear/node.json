@@ -1,0 +1,26 @@
+{
+  "name": "getFullYear",
+  "ns": "date",
+  "title": "Get Full Year",
+  "async": true,
+  "description": "The year (4 digits for 4-digit years) of the specified date according to local time.",
+  "phrases": {
+    "active": "Getting Full Year"
+  },
+  "ports": {
+    "input": {
+      "date": {
+        "title": "Date",
+        "type": "Date",
+        "async": true
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Year",
+        "type": "number",
+        "description": "The year (4 digits for 4-digit years) of the specified date according to local time."
+      }
+    }
+  }
+}

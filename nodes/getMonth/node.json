@@ -1,0 +1,26 @@
+{
+  "name": "getMonth",
+  "ns": "date",
+  "title": "Get Month",
+  "async": true,
+  "description": "The month (0-11) in the specified date according to local time.",
+  "phrases": {
+    "active": "Getting Month"
+  },
+  "ports": {
+    "input": {
+      "date": {
+        "title": "Date",
+        "type": "Date",
+        "async": true
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Month",
+        "type": "number",
+        "description": "The month (0-11) in the specified date according to local time."
+      }
+    }
+  }
+}

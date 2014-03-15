@@ -1,0 +1,25 @@
+{
+  "name": "create",
+  "ns": "date",
+  "title": "Create Date",
+  "description": "Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC.",
+  "phrases": {
+    "active": "Creating Date"
+  },
+  "ports": {
+    "input": {
+      "value": {
+        "title": "Value",
+        "type": "numeric",
+        "description": "Integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC (Unix Epoch).",
+        "default": null
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Date",
+        "type": "Date"
+      }
+    }
+  }
+}

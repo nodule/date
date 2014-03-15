@@ -1,0 +1,308 @@
+{
+  "name": "date",
+  "description": "Date for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/date.git"
+  },
+  "dependencies": {},
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "value": {
+            "title": "Value",
+            "type": "numeric",
+            "description": "Integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC (Unix Epoch).",
+            "default": null
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Date",
+            "type": "Date"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Creating Date"
+      },
+      "description": "Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC.",
+      "title": "Create Date",
+      "ns": "date",
+      "name": "create",
+      "fn": "output.out = new Date(input.value || undefined);\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "value": {
+            "title": "Value",
+            "type": "numeric",
+            "description": "The string should be in a format recognized by the Date.parse() method (IETF-compliant RFC 2822 timestamps and also a version of ISO8601).",
+            "default": null
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Date",
+            "type": "Date"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Creating Date"
+      },
+      "description": "String value representing a date.",
+      "title": "Create Date",
+      "ns": "date",
+      "name": "dateString",
+      "fn": "output.out = new Date(input.value || undefined);\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Month",
+            "type": "number",
+            "description": "The day of the month (1-31) for the specified date according to local time."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Month"
+      },
+      "description": "The day of the month (1-31) for the specified date according to local time.",
+      "async": true,
+      "title": "Get Date",
+      "ns": "date",
+      "name": "getDate",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getDate()\n  });\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Day",
+            "type": "number",
+            "description": "The day of the week (0-6) for the specified date according to local time."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Day"
+      },
+      "description": "The day of the week (0-6) for the specified date according to local time.",
+      "async": true,
+      "title": "Get Day",
+      "ns": "date",
+      "name": "getDay",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getDay()\n  });\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Year",
+            "type": "number",
+            "description": "The year (4 digits for 4-digit years) of the specified date according to local time."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Full Year"
+      },
+      "description": "The year (4 digits for 4-digit years) of the specified date according to local time.",
+      "async": true,
+      "title": "Get Full Year",
+      "ns": "date",
+      "name": "getFullYear",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getFullYear()\n  });\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Hour",
+            "type": "number",
+            "description": "The hour (0-23) in the specified date according to local time."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Hours"
+      },
+      "description": "The hour (0-23) in the specified date according to local time.",
+      "async": true,
+      "title": "Get Hours",
+      "ns": "date",
+      "name": "getHours",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getHours()\n  });\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Milliseconds",
+            "type": "number",
+            "description": "The milliseconds (0-999) in the specified date according to local time."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Milliseconds"
+      },
+      "description": "The milliseconds (0-999) in the specified date according to local time.",
+      "async": true,
+      "title": "Getting Milliseconds",
+      "ns": "date",
+      "name": "getMilliseconds",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getMilliseconds()\n  });\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Minutes",
+            "type": "number",
+            "description": "The minutes (0-59) in the specified date according to local time."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Minutes"
+      },
+      "description": "The minutes (0-59) in the specified date according to local time.",
+      "async": true,
+      "title": "Get Minutes",
+      "ns": "date",
+      "name": "getMinutes",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getMinutes()\n  });\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Month",
+            "type": "number",
+            "description": "The month (0-11) in the specified date according to local time."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Month"
+      },
+      "description": "The month (0-11) in the specified date according to local time.",
+      "async": true,
+      "title": "Get Month",
+      "ns": "date",
+      "name": "getMonth",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getMonth()\n  });\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Seconds",
+            "type": "number",
+            "description": "The seconds (0-59) in the specified date according to local time."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Seconds"
+      },
+      "description": "The seconds (0-59) in the specified date according to local time.",
+      "async": true,
+      "title": "Get Seconds",
+      "ns": "date",
+      "name": "getSeconds",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getSeconds()\n  });\n}\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "date": {
+            "title": "Date",
+            "type": "Date",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Time",
+            "type": "number",
+            "description": "The numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC (negative for prior times)."
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Time"
+      },
+      "description": "The numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC (negative for prior times).",
+      "async": true,
+      "title": "Get Time",
+      "ns": "date",
+      "name": "getTime",
+      "fn": "on.input.date = function() {\n  output({\n    out: data.getTime()\n  });\n}\n"
+    }
+  ],
+  "twigs": []
+}

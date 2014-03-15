@@ -1,0 +1,26 @@
+{
+  "name": "getHours",
+  "ns": "date",
+  "title": "Get Hours",
+  "async": true,
+  "description": "The hour (0-23) in the specified date according to local time.",
+  "phrases": {
+    "active": "Getting Hours"
+  },
+  "ports": {
+    "input": {
+      "date": {
+        "title": "Date",
+        "type": "Date",
+        "async": true
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Hour",
+        "type": "number",
+        "description": "The hour (0-23) in the specified date according to local time."
+      }
+    }
+  }
+}
