@@ -10,7 +10,7 @@
     "input": {
       "value": {
         "title": "Value",
-        "type": "numeric",
+        "type": "string",
         "description": "The string should be in a format recognized by the Date.parse() method (IETF-compliant RFC 2822 timestamps and also a version of ISO8601).",
         "default": null
       }
