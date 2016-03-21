@@ -9,7 +9,7 @@
   },
   "ports": {
     "input": {
-      "date": {
+      "in": {
         "title": "Date",
         "type": "Date",
         "async": true

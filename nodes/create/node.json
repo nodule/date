@@ -8,7 +8,7 @@
   },
   "ports": {
     "input": {
-      "value": {
+      "in": {
         "title": "Value",
         "type": "number",
         "description": "Integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC (Unix Epoch).",

@@ -1,5 +1,5 @@
-on.input.date = function() {
+on.input.in = function() {
   output({
-    out: $.date.getHours()
+    out: $.write('in', $.in.getHours())
   });
 }

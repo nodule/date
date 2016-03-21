@@ -1,5 +1,5 @@
 if($.value) {
-  output.out = new Date($.value);
+  output.out = $.create(new Date($.value));
 } else {
-  output.out = new Date();
+  output.out = $.create(new Date());
 }

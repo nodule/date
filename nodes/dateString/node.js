@@ -1,1 +1,1 @@
-output.out = new Date($.value || undefined);
+output.out = $.write('in', new Date($.in || undefined))
