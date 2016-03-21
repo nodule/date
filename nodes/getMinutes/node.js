@@ -1,5 +1,5 @@
 on.input.date = function() {
   output({
-    out: data.getMinutes()
+    out: input.date.getMinutes()
   });
 }

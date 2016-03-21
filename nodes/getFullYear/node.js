@@ -1,5 +1,5 @@
 on.input.date = function() {
   output({
-    out: data.getFullYear()
+    out: input.date.getFullYear()
   });
 }
