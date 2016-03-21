@@ -1,1 +1,1 @@
-output.out = new Date(input.value || undefined);
+output.out = new Date($.value || undefined);

@@ -1,5 +1,5 @@
 on.input.date = function() {
   output({
-    out: input.date.getSeconds()
+    out: $.date.getSeconds()
   });
 }
