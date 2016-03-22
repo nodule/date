@@ -9,14 +9,14 @@ module.exports = {
   },
   ports: {
     input: {
-      date: {
+      "in": {
         title: "Date",
         type: "Date",
         async: true,
-        fn: function __DATE__(data, x, source, state, input, output) {
+        fn: function __IN__(data, x, source, state, input, output) {
           var r = function() {
             output({
-              out: data.getFullYear()
+              out: $.write($.in.getFullYear())
             });
           }.call(this);
           return {

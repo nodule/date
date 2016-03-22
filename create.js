@@ -8,7 +8,7 @@ module.exports = {
   },
   ports: {
     input: {
-      value: {
+      "in": {
         title: "Value",
         type: "number",
         description: "Integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC (Unix Epoch).",
@@ -22,12 +22,12 @@ module.exports = {
       }
     }
   },
-  fn: function create(input, output, state, done, cb, on) {
+  fn: function create(input, $, output, state, done, cb, on) {
     var r = function() {
-      if (input.value) {
-        output.out = new Date(input.value);
+      if ($.value) {
+        output.out = $.create(new Date($.value));
       } else {
-        output.out = new Date();
+        output.out = $.create(new Date());
       }
     }.call(this);
     return {

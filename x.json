@@ -11,7 +11,7 @@
     {
       "ports": {
         "input": {
-          "value": {
+          "in": {
             "title": "Value",
             "type": "number",
             "description": "Integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC (Unix Epoch).",
@@ -32,12 +32,12 @@
       "title": "Create Date",
       "ns": "date",
       "name": "create",
-      "fn": "if(input.value) {\n  output.out = new Date(input.value);\n} else {\n  output.out = new Date();\n}\n"
+      "fn": "if($.value) {\n  output.out = $.create(new Date($.value));\n} else {\n  output.out = $.create(new Date());\n}\n"
     },
     {
       "ports": {
         "input": {
-          "value": {
+          "in": {
             "title": "Value",
             "type": "string",
             "description": "The string should be in a format recognized by the Date.parse() method (IETF-compliant RFC 2822 timestamps and also a version of ISO8601).",
@@ -58,12 +58,12 @@
       "title": "Create Date",
       "ns": "date",
       "name": "dateString",
-      "fn": "output.out = new Date(input.value || undefined);\n"
+      "fn": "output.out = $.write('in', new Date($.in || undefined))\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -85,12 +85,12 @@
       "title": "Get Date",
       "ns": "date",
       "name": "getDate",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getDate()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getDate())\n  });\n}\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -112,12 +112,12 @@
       "title": "Get Day",
       "ns": "date",
       "name": "getDay",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getDay()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.in.getDay()\n  });\n}\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -139,12 +139,12 @@
       "title": "Get Full Year",
       "ns": "date",
       "name": "getFullYear",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getFullYear()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write($.in.getFullYear())\n  });\n}\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -166,12 +166,12 @@
       "title": "Get Hours",
       "ns": "date",
       "name": "getHours",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getHours()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getHours())\n  });\n}\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -193,12 +193,12 @@
       "title": "Getting Milliseconds",
       "ns": "date",
       "name": "getMilliseconds",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getMilliseconds()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getMilliseconds())\n  });\n}\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -220,12 +220,12 @@
       "title": "Get Minutes",
       "ns": "date",
       "name": "getMinutes",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getMinutes()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getMinutes())\n  });\n}\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -247,12 +247,12 @@
       "title": "Get Month",
       "ns": "date",
       "name": "getMonth",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getMonth()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getMonth())\n  });\n}\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -274,12 +274,12 @@
       "title": "Get Seconds",
       "ns": "date",
       "name": "getSeconds",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getSeconds()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getSeconds())\n  });\n}\n"
     },
     {
       "ports": {
         "input": {
-          "date": {
+          "in": {
             "title": "Date",
             "type": "Date",
             "async": true
@@ -301,7 +301,7 @@
       "title": "Get Time",
       "ns": "date",
       "name": "getTime",
-      "fn": "on.input.date = function() {\n  output({\n    out: data.getTime()\n  });\n}\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getTime())\n  });\n}\n"
     }
   ],
   "twigs": []

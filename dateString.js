@@ -8,7 +8,7 @@ module.exports = {
   },
   ports: {
     input: {
-      value: {
+      "in": {
         title: "Value",
         type: "string",
         description: "The string should be in a format recognized by the Date.parse() method (IETF-compliant RFC 2822 timestamps and also a version of ISO8601).",
@@ -22,9 +22,9 @@ module.exports = {
       }
     }
   },
-  fn: function dateString(input, output, state, done, cb, on) {
+  fn: function dateString(input, $, output, state, done, cb, on) {
     var r = function() {
-      output.out = new Date(input.value || undefined);
+      output.out = $.write('in', new Date($.in || undefined))
     }.call(this);
     return {
       output: output,
