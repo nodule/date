@@ -9,6 +9,13 @@
   "dependencies": {},
   "nodes": [
     {
+      "name": "create",
+      "ns": "date",
+      "title": "Create Date",
+      "description": "Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC.",
+      "phrases": {
+        "active": "Creating Date"
+      },
       "ports": {
         "input": {
           "in": {
@@ -24,17 +31,16 @@
             "type": "Date"
           }
         }
-      },
+      }
+    },
+    {
+      "name": "dateString",
+      "ns": "date",
+      "title": "Create Date",
+      "description": "String value representing a date.",
       "phrases": {
         "active": "Creating Date"
       },
-      "description": "Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC.",
-      "title": "Create Date",
-      "ns": "date",
-      "name": "create",
-      "fn": "if($.value) {\n  output.out = $.create(new Date($.value));\n} else {\n  output.out = $.create(new Date());\n}\n"
-    },
-    {
       "ports": {
         "input": {
           "in": {
@@ -50,17 +56,17 @@
             "type": "Date"
           }
         }
-      },
-      "phrases": {
-        "active": "Creating Date"
-      },
-      "description": "String value representing a date.",
-      "title": "Create Date",
-      "ns": "date",
-      "name": "dateString",
-      "fn": "output.out = $.write('in', new Date($.in || undefined))\n"
+      }
     },
     {
+      "name": "getDate",
+      "ns": "date",
+      "title": "Get Date",
+      "async": true,
+      "description": "The day of the month (1-31) for the specified date according to local time.",
+      "phrases": {
+        "active": "Getting Month"
+      },
       "ports": {
         "input": {
           "in": {
@@ -76,18 +82,17 @@
             "description": "The day of the month (1-31) for the specified date according to local time."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Month"
-      },
-      "description": "The day of the month (1-31) for the specified date according to local time.",
-      "async": true,
-      "title": "Get Date",
-      "ns": "date",
-      "name": "getDate",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getDate())\n  });\n}\n"
+      }
     },
     {
+      "name": "getDay",
+      "ns": "date",
+      "title": "Get Day",
+      "async": true,
+      "description": "The day of the week (0-6) for the specified date according to local time.",
+      "phrases": {
+        "active": "Getting Day"
+      },
       "ports": {
         "input": {
           "in": {
@@ -103,18 +108,17 @@
             "description": "The day of the week (0-6) for the specified date according to local time."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Day"
-      },
-      "description": "The day of the week (0-6) for the specified date according to local time.",
-      "async": true,
-      "title": "Get Day",
-      "ns": "date",
-      "name": "getDay",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.in.getDay()\n  });\n}\n"
+      }
     },
     {
+      "name": "getFullYear",
+      "ns": "date",
+      "title": "Get Full Year",
+      "async": true,
+      "description": "The year (4 digits for 4-digit years) of the specified date according to local time.",
+      "phrases": {
+        "active": "Getting Full Year"
+      },
       "ports": {
         "input": {
           "in": {
@@ -130,18 +134,17 @@
             "description": "The year (4 digits for 4-digit years) of the specified date according to local time."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Full Year"
-      },
-      "description": "The year (4 digits for 4-digit years) of the specified date according to local time.",
-      "async": true,
-      "title": "Get Full Year",
-      "ns": "date",
-      "name": "getFullYear",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.write($.in.getFullYear())\n  });\n}\n"
+      }
     },
     {
+      "name": "getHours",
+      "ns": "date",
+      "title": "Get Hours",
+      "async": true,
+      "description": "The hour (0-23) in the specified date according to local time.",
+      "phrases": {
+        "active": "Getting Hours"
+      },
       "ports": {
         "input": {
           "in": {
@@ -157,18 +160,17 @@
             "description": "The hour (0-23) in the specified date according to local time."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Hours"
-      },
-      "description": "The hour (0-23) in the specified date according to local time.",
-      "async": true,
-      "title": "Get Hours",
-      "ns": "date",
-      "name": "getHours",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getHours())\n  });\n}\n"
+      }
     },
     {
+      "name": "getMilliseconds",
+      "ns": "date",
+      "title": "Getting Milliseconds",
+      "async": true,
+      "description": "The milliseconds (0-999) in the specified date according to local time.",
+      "phrases": {
+        "active": "Getting Milliseconds"
+      },
       "ports": {
         "input": {
           "in": {
@@ -184,18 +186,17 @@
             "description": "The milliseconds (0-999) in the specified date according to local time."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Milliseconds"
-      },
-      "description": "The milliseconds (0-999) in the specified date according to local time.",
-      "async": true,
-      "title": "Getting Milliseconds",
-      "ns": "date",
-      "name": "getMilliseconds",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getMilliseconds())\n  });\n}\n"
+      }
     },
     {
+      "name": "getMinutes",
+      "ns": "date",
+      "title": "Get Minutes",
+      "async": true,
+      "description": "The minutes (0-59) in the specified date according to local time.",
+      "phrases": {
+        "active": "Getting Minutes"
+      },
       "ports": {
         "input": {
           "in": {
@@ -211,18 +212,17 @@
             "description": "The minutes (0-59) in the specified date according to local time."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Minutes"
-      },
-      "description": "The minutes (0-59) in the specified date according to local time.",
-      "async": true,
-      "title": "Get Minutes",
-      "ns": "date",
-      "name": "getMinutes",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getMinutes())\n  });\n}\n"
+      }
     },
     {
+      "name": "getMonth",
+      "ns": "date",
+      "title": "Get Month",
+      "async": true,
+      "description": "The month (0-11) in the specified date according to local time.",
+      "phrases": {
+        "active": "Getting Month"
+      },
       "ports": {
         "input": {
           "in": {
@@ -238,18 +238,17 @@
             "description": "The month (0-11) in the specified date according to local time."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Month"
-      },
-      "description": "The month (0-11) in the specified date according to local time.",
-      "async": true,
-      "title": "Get Month",
-      "ns": "date",
-      "name": "getMonth",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getMonth())\n  });\n}\n"
+      }
     },
     {
+      "name": "getSeconds",
+      "ns": "date",
+      "title": "Get Seconds",
+      "async": true,
+      "description": "The seconds (0-59) in the specified date according to local time.",
+      "phrases": {
+        "active": "Getting Seconds"
+      },
       "ports": {
         "input": {
           "in": {
@@ -265,18 +264,17 @@
             "description": "The seconds (0-59) in the specified date according to local time."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Seconds"
-      },
-      "description": "The seconds (0-59) in the specified date according to local time.",
-      "async": true,
-      "title": "Get Seconds",
-      "ns": "date",
-      "name": "getSeconds",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getSeconds())\n  });\n}\n"
+      }
     },
     {
+      "name": "getTime",
+      "ns": "date",
+      "title": "Get Time",
+      "async": true,
+      "description": "The numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC (negative for prior times).",
+      "phrases": {
+        "active": "Getting Time"
+      },
       "ports": {
         "input": {
           "in": {
@@ -292,17 +290,25 @@
             "description": "The numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC (negative for prior times)."
           }
         }
-      },
-      "phrases": {
-        "active": "Getting Time"
-      },
-      "description": "The numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC (negative for prior times).",
-      "async": true,
-      "title": "Get Time",
+      }
+    },
+    {
+      "name": "now",
       "ns": "date",
-      "name": "getTime",
-      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', $.in.getTime())\n  });\n}\n"
+      "title": "Now",
+      "description": "Outputs the number of milliseconds elapsed since January 1, 1970",
+      "phrases": {
+        "active": "Performing Date.now"
+      },
+      "ports": {
+        "input": {},
+        "output": {
+          "out": {
+            "title": "Now",
+            "type": "Date"
+          }
+        }
+      }
     }
-  ],
-  "twigs": []
+  ]
 }

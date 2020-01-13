@@ -1,0 +1,19 @@
+{
+  "name": "now",
+  "ns": "date",
+  "title": "Now",
+  "description": "Outputs the number of milliseconds elapsed since January 1, 1970",
+  "phrases": {
+    "active": "Performing Date.now"
+  },
+  "ports": {
+    "input": {
+    },
+    "output": {
+      "out": {
+        "title": "Now",
+        "type": "Date"
+      }
+    }
+  }
+}

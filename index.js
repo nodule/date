@@ -9,5 +9,6 @@ module.exports = {
   getMinutes: require('./getMinutes'),
   getMonth: require('./getMonth'),
   getSeconds: require('./getSeconds'),
-  getTime: require('./getTime')
+  getTime: require('./getTime'),
+  now: require('./now')
 }
